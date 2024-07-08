@@ -1,0 +1,51 @@
+package jm.task.core.jdbc.dao;
+
+import com.mysql.cj.Session;
+import jm.task.core.jdbc.model.User;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+import static jm.task.core.jdbc.util.Util.getConnect;
+
+public class UserDaoHibernateImpl implements UserDao {
+    public UserDaoHibernateImpl() {
+
+    }
+
+
+
+    @Override
+    public void createUsersTable() {
+
+    }
+
+    @Override
+    public void dropUsersTable() {
+
+    }
+
+    @Override
+    public void saveUser(String name, String lastName, byte age) {
+
+    }
+
+    @Override
+    public void removeUserById(long id) {
+
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return null;
+    }
+
+    @Override
+    public void cleanUsersTable() {
+
+    }
+}
