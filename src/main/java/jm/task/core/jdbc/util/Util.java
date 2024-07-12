@@ -1,8 +1,6 @@
 package jm.task.core.jdbc.util;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.net.PasswordAuthentication;
+
 import java.sql.*;
 
 
@@ -12,6 +10,10 @@ public class Util {
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "1234";
     private static final String DB_DRIVE = "com.mysql.cj.jdbc.Driver";
+
+
+    private Util() {
+    }
 
 
     public static Connection getConnect() {
@@ -25,6 +27,15 @@ public class Util {
         }
         return connection;
     }
-
+    public static void closeConnection(Connection connection) {
+        if (connection != null) {
+            try {
+                connection.close();
+                System.out.println("Connection closed successfully");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     // реализуйте настройку соеденения с БД
 }
